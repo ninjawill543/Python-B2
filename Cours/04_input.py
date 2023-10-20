@@ -1,4 +1,7 @@
+print("\n")
 # I/O
 
-oui = input("cuantos anos tienes ?")
-print (f"Votre birthday : {2023 - int(oui)}")
+age = input("Quel est votre age ? ")
+print(age)
+
+print(f"Votre date de naissance : {2023 - float(age)}")

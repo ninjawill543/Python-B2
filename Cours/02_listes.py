@@ -1,60 +1,64 @@
-eleves = ["chump", "oi", "jedfujwedw", "juan", "ojui"]
+print("\n")
 
-print (eleves)
+eleves = ["Thomas", "Lisa", "Helene", "Patrick", "Paul"]
+print(eleves)
 
-notes = [1.5, 77, 20, 6.5, 9]
+notes = [10.5, 12.0, 16.0, 17.5, 4.0]
+#          |    |      |    |     |
+#          0    1      2    3     4
+#                     ...  -2    -1
 print(notes)
 
 dates = []
 
-
 print(len(notes))
 
-
 print(notes[0])
-print(notes[-3])
+print(notes[len(notes) - 1])
+print(notes[-1])
+print(notes[-5])
+print(notes[len(notes) * -1])
 
+eleves.append("Lucas")
+notes.append(20.0)
 
-print (eleves)
+print(eleves)
 print(notes)
 
-eleves.append("juan")
-notes.append(20)
-print (eleves)
-print(notes)
+# eleves.remove("Lucas")
+# eleves.pop(3)
 
-eleves.remove("juan")
-eleves.pop(3)
+# Slicing
 
-#slicing
+jours = ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"]
+lun_ven = [jours[0], jours[1], jours[2]]
 
-jours =[1, 2, 3, 4, 5, 6, 7]
-oui = jours[0:5]
-print (oui)
+lun_ven = jours[0:5]
+print(lun_ven)
 
 weekend = jours[5:]
 print(weekend)
 
-#tableaux n-dimension
+# print(jours[:])
 
-jours_fr_en = [["lun", "mar", "mer", "jeud", "ven", "sam", "dim"],["mon", "tue", "wed", "thu", "fri", "sat", "sun"]]
+# Tableaux n-dimension
 
-print(jours_fr_en)
-
-image = [
-    [[16,125,255], ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
-    [".", ".", ".", ".",".", ".", ".", ".",".", "."],
+jours_fr_en = [
+    ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"],
+    ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 ]
 
-# les chaines de caractere sont des tableaux
+print(jours_fr_en[1][-2:])
 
-chaine = "oui oui baguette"
-print (chaine[-1])
+image = [
+    [[16, 125, 255], ".", ".", ".", ".", ".", ".", ".", ".", "."],
+    [".", ".", ".", ".", ".", ".", ".", ".", ".", "."],
+    [".", ".", ".", ".", ".", ".", ".", ".", ".", "."],
+]
+
+# Les chaines de caractère sont des tableaux
+
+chaine = "Coucou j'aime le Python !"
+print(chaine)
+print(chaine[-1])
+print(chaine[-8:])
