@@ -8,6 +8,7 @@ class Voiture:
     def __init__(self, marque, couleur = "rouge"):
         self.couleur = couleur
         self._vitesse_max = 220
+        self.vitesse_securite = self._vitesse_max + 10
         self.marque = marque
         self.nb_roues = 4
         self.demarree = False
@@ -31,6 +32,18 @@ class Voiture:
                     print(self._vitesse)
         else:
             print("Il faut démarrer la voiture avant d'avancer")
+
+
+
+    def get_vitesse(self):
+        return self._vitesse
+
+    
+    def set_vitesse(self, nouvelle_vitesse):
+        if (not nouvelle_vitesse > self.vitesse_securite):
+            self._vitesse = nouvelle_vitesse
+        else:
+            print("nope trop rapido")
 
 
 
