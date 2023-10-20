@@ -7,16 +7,16 @@ class Voiture:
     # constructeur
     def __init__(self, marque, couleur = "rouge"):
         self.couleur = couleur
-        self.vitesse_max = 220
+        self._vitesse_max = 220
         self.marque = marque
         self.nb_roues = 4
         self.demarree = False
-        self.vitesse = 0
+        self._vitesse = 0
         print("\n")
         print("une nouvelle voiture est créée")
 
     def __str__(self):
-        return f"Une {self.marque} {self.couleur} qui roule à une vitesse max de {self.vitesse_max}"
+        return f"Une {self.marque} {self.couleur} qui roule à une vitesse max de {self._vitesse_max}"
 
     def demarrer(self):
         if (not self.demarree):
@@ -26,9 +26,9 @@ class Voiture:
     def avancer(self, vitesse_cible):
         if (self.demarree == True):
             for i in range(vitesse_cible):
-                if (self.vitesse + 1 <= self.vitesse_max):
-                    self.vitesse += 1
-                    print(self.vitesse)
+                if (self._vitesse + 1 <= self._vitesse_max):
+                    self._vitesse += 1
+                    print(self._vitesse)
         else:
             print("Il faut démarrer la voiture avant d'avancer")
 
